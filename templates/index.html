@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>File Converter</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">PRIVATE · TEMPORARY PROCESSING</p>
+      <h1>File Converter</h1>
+      <p class="intro">Convert your documents in a few clicks. Files are removed when conversion finishes.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="upload-heading">
+      <h2 id="upload-heading">Choose files</h2>
+      <label class="dropzone" id="dropzone" for="file-input">
+        <span class="upload-icon" aria-hidden="true">↑</span>
+        <strong>Drop files here or <span>browse</span></strong>
+        <span class="hint">Up to 10 files · 25 MB total</span>
+        <input id="file-input" type="file" multiple>
+      </label>
+      <ul id="file-list" class="file-list" aria-label="Selected files"></ul>
+
+      <div class="controls">
+        <label for="target">Convert to</label>
+        <select id="target" disabled>
+          <option value="">Select files first</option>
+        </select>
+        <button id="convert" type="button" disabled>Convert files</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <div id="download"></div>
+    </section>
+    <p class="footnote">Conversion uses LibreOffice. Available formats depend on the files you select.</p>
+  </main>
+</body>
+</html>
